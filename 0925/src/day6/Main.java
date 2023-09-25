@@ -15,6 +15,12 @@ public class Main {
 		pizza.name = "자바피자";
 		double area = pizza.getArea();
 		System.out.println(pizza.name + "의 면적은 " + area);
+		
+		Circle donut = new Circle(); // Circle 객체 생성
+		donut.radius = 2; // 도넛의 반지름을 2로 설정
+		donut.name = "자바도넛"; // 도넛의 이름 설정
+		area = donut.getArea(); // 도넛의 면적 알아내기
+		System.out.println(donut.name + "의 면적은 " + area);
 	}
 
 }

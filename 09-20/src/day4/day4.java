@@ -63,19 +63,29 @@ public class day4 {
     }
     
     public static void startGame() {
-    	int max = -1;
+    	for(int i = 0; i < number; i++) player[i].drawCard(card);
+    }
+    
+    public static void checkWinner() {
+    	int maxnumber = -1, maxMark = -1;
     	Person p;
     	p = new Person();
-    	for(int i = 0; i < number; i++) player[i].drawCard(card);
+    	
     	for(int i = 0; i < number; i++) {
-    		// 1등 체크
-    		if(max <= player[i].card.num) {
-    			max = player[i].card.num;
+    		if(maxnumber < (player[i].card.num % 13)) {
+    			maxnumber = (player[i].card.num % 13);
     			p = player[i];
     		}
+    		else if(maxnumber == (player[i].card.num % 13)) {
+    			if(maxMark < (player[i].card.num / 13)) {
+    				maxMark = (player[i].card.num / 13);
+        			p = player[i];
+        		}
+			}
     	}
     	p.grade += 5;
     	System.out.println("승자는 " + p.name + "입니다.");
+    	System.out.println(p.card.mark + " " + p.card.number);
     }
     
     public static void main(String[] args) {
@@ -84,6 +94,10 @@ public class day4 {
         creatCard(); // 카드 생성
         
         startGame(); // 게임 실행
+        
+        checkWinner(); // 우승자 체크
+        
+        
 
     }
 }

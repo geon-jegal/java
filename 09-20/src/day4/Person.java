@@ -15,6 +15,7 @@ public class Person {
 	
 	public void getCard(Card card) {
 		this.card = card;
+		//System.out.println("");
 	}
 	
 	public void drawCard(Card[] deck) {
