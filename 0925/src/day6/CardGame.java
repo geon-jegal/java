@@ -68,7 +68,13 @@ public class CardGame {
 		peopleNum = checkPlayerNumber();
 		
 		cardDrawn(peopleNum);
-		printCard();
+		//printCard();
+		
+		for (int i = 0; i < peopleNum; i++) {
+	        System.out.print("플레이어 " + (i + 1) + "의 ");
+	        card[i].print();
+	    }
+		 System.out.println();
 		
 		printHighestCard();
 	}
