@@ -4,7 +4,7 @@ import java.util.Random;
 
 
 public class CardGame {
-	public static Card ori_card[], cardTemp[];
+	public static Card ori_card[], cardTemp[]; 
 	
 	public static void sort() {
 		for(int i = 0; i < cardTemp.length - 1; i++) {
