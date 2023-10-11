@@ -12,22 +12,8 @@ public class Card {
 	    setCard(Type.values()[number / 13], number % 13);
 	}
 	
-	public Card(int number) {
-		Random random = new Random(); //랜덤 객체 생성
-	   	int mark = random.nextInt(4);
-	    setCard(Type.values()[mark], number);
-	}
-	
 	public Card(Type img, int num) {
-	    this.img = img;
-	    this.num = num;
-	}
-	
-	public Card(Type img) {
-	    this.img = img;
-	    Random random = new Random(); //랜덤 객체 생성
-	   	int number = random.nextInt(13);
-	    this.num = number;
+	    setCard(img, num);
 	}
 	
 	public void setCard(Type img, int num) {
