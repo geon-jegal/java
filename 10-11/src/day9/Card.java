@@ -1,4 +1,4 @@
-package day7;
+package day9;
 
 import java.util.Random;
 
@@ -9,13 +9,13 @@ public class Card {
 	public Card() {
 		Random random = new Random(); //랜덤 객체 생성
 	   	int number = random.nextInt(52);
-	    setCard(Type.values()[number / 13], number % 13);
+	    setCard(number / 13, number % 13);
 	}
 	
 	public Card(int number) {
 		Random random = new Random(); //랜덤 객체 생성
 	   	int mark = random.nextInt(4);
-	    setCard(Type.values()[mark], number);
+	    setCard(mark, number);
 	}
 	
 	public Card(Type img, int num) {
@@ -28,6 +28,11 @@ public class Card {
 	    Random random = new Random(); //랜덤 객체 생성
 	   	int number = random.nextInt(13);
 	    this.num = number;
+	}
+	
+	public void setCard(int mark, int num) {
+		this.num = num;
+		this.img = Type.values()[mark];
 	}
 	
 	public void setCard(Type img, int num) {
