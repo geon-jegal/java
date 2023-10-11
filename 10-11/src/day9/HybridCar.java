@@ -2,7 +2,7 @@ package day9;
 
 public class HybridCar extends Car {
 
-	double electricGauge;
+	private double electricGauge;
 	
 	public HybridCar(int gas, double ele) {
 		super(gas);

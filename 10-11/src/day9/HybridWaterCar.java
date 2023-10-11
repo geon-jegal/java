@@ -2,7 +2,7 @@ package day9;
 
 public class HybridWaterCar extends HybridCar {
 
-	int waterGauge;
+	private int waterGauge;
 	
 	public HybridWaterCar(double ele, int water) {
 		super(0, ele);

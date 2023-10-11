@@ -2,7 +2,7 @@ package day9;
 
 public class Car {
 
-	int gasolineGauge;
+	private int gasolineGauge;
 	
 	public Car(int gas) {
 		this.gasolineGauge = gas;
