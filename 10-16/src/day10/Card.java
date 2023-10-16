@@ -1,4 +1,4 @@
-package day7;
+package day10;
 
 import java.util.Random;
 
