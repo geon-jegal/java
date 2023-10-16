@@ -1,8 +1,6 @@
 package day6;
 
 import java.util.Scanner;
-import java.util.Random;
-
 
 public class CardGame {
 
@@ -11,69 +9,50 @@ public class CardGame {
 	public static int peopleNum, Winner;
 	
 	// 게임에 참가하는 플레이어의 수를 구하는 메소드
-	public static int checkPlayerNumber() {
-		int number;
-    	System.out.println("플레이할 유저수를 입력하시오.(최대 52명 입력 가능합니다)");
+    public static int checkPlayerNumber() {
+        int number;
         Scanner scan = new Scanner(System.in);
-		number = scan.nextInt();
-		scan.close();
-		
-		return number;
+        do {
+            System.out.println("플레이할 유저수를 입력하시오.(최대 52명 입력 가능합니다)");
+            number = scan.nextInt();
+        } while (number > 52);
+        scan.close();
+        
+        return number;
     }
 	
 	// 카드 뽑기1
-	public static void cardDrawn1(int num) {
-	    for (int i = 0; i < num; i++) {
-	        int randomNum;
-	        do {
-	            Random random = new Random();
-	            randomNum = random.nextInt(52); // 0부터 51까지의 랜덤한 수를 생성
-	        } while (cardDrawn[randomNum]); // 이미 뽑은 카드라면 다시 뽑기
+    public static void cardDrawn1(int num) {
+        for (int i = 0; i < num; i++) {
+            int randomNum;
+            do {
+                randomNum = (int) (Math.random() * 52); 
+            } while (cardDrawn[randomNum]);
 
-	        card[i] = new TrumpCard(randomNum); // 새로운 카드를 생성하고 배열에 할당
-	        cardDrawn[randomNum] = true; // 뽑은 카드를 기록
-	    }
-	}
-	
-	// 카드 뽑기2 (생성자의 매개변수 1개)
-	public static void cardDrawn2(int num) {
-	    for (int i = 0; i < num; i++) {
-	        int randomNum, cardNum;
-	        do {
-	            Random random = new Random();
-	            randomNum = random.nextInt(13); // 0부터 13까지의 랜덤한 수를 생성
-	            card[i] = new TrumpCard(randomNum); // 새로운 카드를 생성하고 배열에 할당
-	            cardNum = card[i].getNumber();
-	        } while (cardDrawn[cardNum]); // 이미 뽑은 카드라면 다시 뽑기
+            card[i] = new TrumpCard(randomNum);
+            cardDrawn[randomNum] = true; 
+        }
+    }
 
-	        card[i] = new TrumpCard(randomNum); // 새로운 카드를 생성하고 배열에 할당
-	        cardDrawn[randomNum] = true; // 뽑은 카드를 기록
-	    }
-	}
-	
-	// 카드 뽑기3 (생성자의 매개변수 2개)
-	public static void cardDrawn3(int num) {
-	    for (int i = 0; i < num; i++) {
-	        int randomNum1, randomNum2, cardNum;
-	        do {
-	            Random random = new Random();
-	            randomNum1 = random.nextInt(13); // 0부터 13까지의 랜덤한 수를 생성
-	            randomNum2 = random.nextInt(4); // 0부터 13까지의 랜덤한 수를 생성
-	            //card[i] = new TrumpCard(randomNum1, randomNum2); // 새로운 카드를 생성하고 배열에 할당
-	            cardNum = card[i].getNumber();
-	        } while (cardDrawn[cardNum]); // 이미 뽑은 카드라면 다시 뽑기
+    // 카드 뽑기2 (생성자의 매개변수 1개)
+    public static void cardDrawn2(int num) {
+        for (int i = 0; i < num; i++) {
+            int randomNum;
+            do {
+                randomNum = (int) (Math.random() * 13); 
+                card[i] = new TrumpCard(randomNum);
+            } while (cardDrawn[card[i].getNumber()]); 
 
-	        //card[i] = new TrumpCard(randomNum1, randomNum2); // 새로운 카드를 생성하고 배열에 할당
-	        cardDrawn[randomNum1 * 3 + randomNum2] = true; // 뽑은 카드를 기록
-	    }
-	}
+            cardDrawn[card[i].getNumber()] = true;
+        }
+    }
 	
 	// 우승자 체크
 	public static TrumpCard findWinner(TrumpCard[] card, int peopleNum) {
 	    TrumpCard highestCard = card[0]; // 초기화를 위해 첫 번째 카드를 가장 높은 카드로 설정합니다.
 
 	    for (int i = 1; i < peopleNum; i++) {
-	        if (card[i].getNumber() > highestCard.getNumber()) {
+	        if (card[i].getNum() > highestCard.getNum()) {
 	            highestCard = card[i];
 	            Winner = i;
 	        } else if (card[i].getNum() == highestCard.getNum()) {
@@ -95,6 +74,7 @@ public class CardGame {
 	
 	// 메인함수
 	public static void main(String[] args) {
+
 		/*
 		cardDrawn = new boolean[52]; // 52장의 카드가 이미 뽑혔는지를 나타내는 배열
 		
@@ -119,6 +99,7 @@ public class CardGame {
 		printWinner(Winner, winnerCard);
 		*/
 		
+		System.out.println();
 		TrumpCard card1 = new TrumpCard(3);
 		TrumpCard card2 = new TrumpCard();
 		TrumpCard card3 = new TrumpCard(Mark.CLOVER);
