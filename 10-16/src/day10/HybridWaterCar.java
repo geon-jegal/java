@@ -1,4 +1,4 @@
-package day9;
+package day10;
 
 public class HybridWaterCar extends HybridCar {
 
