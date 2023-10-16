@@ -3,34 +3,19 @@ package day10;
 import java.util.Random;
 
 public class Card {
-	protected int num, Number;
-	private Type c;
+	protected int num, type;
 	
 	public Card() {
 		randomCard();
 	}
 	
-	public Card(int num, int n) {
-	    setCard(num, n);
-	}
-	
-	public void setCard(int num, int n) {
-		this.num = num;
-		this.c = Type.values()[n];
-	}
-	
 	public void randomCard() {
 		Random random = new Random(); //랜덤 객체 생성
-	   	int number = random.nextInt(52);
-	   	this.Number = number;
-	    setCard(number % 13, number / 13);
-	}
-	
-	public int getNum() {
-		return this.num;
+		this.num = random.nextInt(13);
+		this.type = random.nextInt(4);
 	}
 	
 	public void ShowCard() {
-		System.out.println("CardNum: " + this.num + " " + this.c.name());
+		System.out.println("Card: " + (this.num + 1) + " " + Type.values()[this.type]);
     }
 }
