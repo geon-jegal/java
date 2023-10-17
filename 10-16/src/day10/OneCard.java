@@ -3,10 +3,6 @@ package day10;
 
 public class OneCard extends Card {
 	
-	public OneCard() {
-		super.randomCard();
-	}
-	
 	
 	public void ShowCard() {
 		if(this.num > 0 && this.num < 10)
