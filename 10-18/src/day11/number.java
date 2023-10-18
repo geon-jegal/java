@@ -1,4 +1,4 @@
-package day10;
+package day11;
 
 public enum number {
 	J, Q, K
