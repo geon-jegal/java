@@ -8,16 +8,14 @@ public class Uno extends Card implements Comparable<Uno>{
 	
 	@Override
 	public int compareTo(Uno c) {
+		System.out.print("Winner ");
 		if(c.num < this.num) {
-			System.out.print("Winner ");
 			this.ShowCard();
 			return 1;
 		}else if(c.num == this.num && c.type < this.type) {
-			System.out.print("Winner ");
 			this.ShowCard();
 			return 1;
 		}else {
-			System.out.print("Winner ");
 			c.ShowCard();
 			return 0;
 		}

@@ -9,16 +9,14 @@ public class OneCard extends Card implements Comparable<OneCard> {
 	
 	@Override
 	public int compareTo(OneCard c) {
+		System.out.print("Winner ");
 		if(c.num < this.num) {
-			System.out.print("Winner ");
 			this.ShowCard();
 			return 1;
 		}else if(c.num == this.num && c.type < this.type) {
-			System.out.print("Winner ");
 			this.ShowCard();
 			return 1;
 		}else {
-			System.out.print("Winner ");
 			c.ShowCard();
 			return 0;
 		}
