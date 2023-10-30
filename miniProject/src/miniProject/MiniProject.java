@@ -1,6 +1,5 @@
 package miniProject;
 
-
 public class MiniProject {
 	
 	private static PhoneManager manager;
