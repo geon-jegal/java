@@ -1,4 +1,6 @@
-package day13;
+package app;
+
+import lib.Card;
 
 public class Uno extends Card implements Comparable<Uno>{
 	
@@ -10,23 +12,23 @@ public class Uno extends Card implements Comparable<Uno>{
 	public int compareTo(Uno c) {
 		System.out.print("Winner ");
 		if(c.num < this.num) {
-			this.ShowCard();
+			System.out.print(this);
 			return 1;
 		}else if(c.num == this.num && c.type < this.type) {
-			this.ShowCard();
+			System.out.print(this);
 			return 1;
 		}else {
-			c.ShowCard();
+			System.out.print(c);
 			return 0;
 		}
 	}
 	
 	
-	public void ShowCard() {
+	public String toString() {
 		if(this.num < 10)
-			System.out.println("Uno: " + (this.num + 1) + " " + UnoType.values()[this.type]);
+			return "Uno: " + (this.num + 1) + " " + UnoType.values()[this.type];
 		else {
-			System.out.println("Uno: " + UnoNum.values()[this.num - 10] + " " + UnoType.values()[this.type]);
+			return "Uno: " + UnoNum.values()[this.num - 10] + " " + UnoType.values()[this.type];
 		}
     }
 }

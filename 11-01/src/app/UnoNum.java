@@ -1,4 +1,4 @@
-package day13;
+package app;
 
 public enum UnoNum {
 	Skip, Reverse, Draw
