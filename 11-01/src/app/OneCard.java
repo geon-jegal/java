@@ -8,12 +8,10 @@ public class OneCard extends Card{
 		this.draw();
 	}
 	
-	
 	public boolean equals(OneCard c) {
 		if(this.num == c.num && this.type == c.type) return true;
 		else return false;
 	}
-	
 	
 	public String toString() {
 		if(this.num > 0 && this.num < 10)
