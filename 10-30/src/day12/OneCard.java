@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 
 public class OneCard extends Card implements Comparable<OneCard> {

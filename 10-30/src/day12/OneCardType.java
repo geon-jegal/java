@@ -1,4 +1,4 @@
-package day11;
+package day12;
 
 public enum OneCardType {
 	SPADE, DIAMOND, HEART, CLOVER
