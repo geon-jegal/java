@@ -11,7 +11,7 @@ public class PhoneManager {
     public PhoneManager() {
         this.phoneMap = new HashMap<>();
         this.sc = new Scanner(System.in); // Scanner 객체를 생성
-        //loadFromFile("phoneData.dat");
+        loadFromFile("phoneData.dat");
     }
 
     private void insert() {
@@ -87,7 +87,6 @@ public class PhoneManager {
         }
     }
 
-    // 파일에서 불러오는 메서드
     public void loadFromFile(String fileName) {
         try {
             FileInputStream fis = new FileInputStream(fileName);
@@ -96,11 +95,15 @@ public class PhoneManager {
             ois.close();
             fis.close();
             System.out.println("데이터가 성공적으로 불러와졌습니다.");
-        } catch (IOException | ClassNotFoundException e) {
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("데이터 불러오기 중 오류가 발생했습니다. (클래스를 찾을 수 없음)");
+        } catch (IOException e) {
             e.printStackTrace();
             System.out.println("데이터 불러오기 중 오류가 발생했습니다.");
         }
     }
+
     
     
     public void run() {
