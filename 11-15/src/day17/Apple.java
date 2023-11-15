@@ -1,6 +1,6 @@
-package day16;
+package day17;
 
-public class Apple extends Fruit{
+public class Apple extends Fruit {
 	
 	public String toString() {
 		return "사과";

@@ -12,7 +12,7 @@ public class Generic {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		GenericPrint<Apple> a = new GenericPrint<Apple>();
+		Box<Apple> a = new Box<Apple>();
 		Apple b = new Apple();
 		a.set(b);
 		a.print();
@@ -26,7 +26,7 @@ public class Generic {
         printArray(charArray);
 
         // 사용자 정의 객체(Apple) 배열을 사용한 예제
-        Apple[] appleArray = {new Apple(), new Apple(), new Apple()};
-        printArray(appleArray);
+        Fruit[] FruitArray = {new Apple(), new Orange(), new Apple()};
+        printArray(FruitArray);
 	}
 }
