@@ -5,7 +5,7 @@ public class Generic {
 	// 배열의 요소를 출력하는 제네릭 메서드
     public static <E> void printArray(E[] array) {
         for (E element : array) {
-            System.out.print(element + ", ");
+            System.out.print(element + " ");
         }
         System.out.println();
     }

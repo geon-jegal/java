@@ -5,4 +5,8 @@ public class Apple {
 	public Apple() {
 		
 	}
+	
+	public String toString() {
+		return "사과";
+	}
 }
