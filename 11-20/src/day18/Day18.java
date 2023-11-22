@@ -11,18 +11,21 @@ public class Day18 {
 		Member m3 = new Member(103, "Park");
 		Member m4 = new Member(104, "Park");
 		Member m5 = new Member(101, "Kim");
+		
+		System.out.println("insert 시작");
 		m.addMember(m1);
 		m.addMember(m2);
 		m.addMember(m3);
 		m.addMember(m4);
 		m.addMember(m5);
-
+		
 		System.out.println("\nPrint All");
 		m.showAll();
-
+		
+		System.out.println("\ndelete 시작");
 		m.removeMember(1);
 		m.removeMember(101);
-
+		
 		System.out.println("\nPrint All");
 		m.showAll();
 	}
