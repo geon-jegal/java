@@ -16,13 +16,13 @@ public class Day18 {
 		m.addMember(m3);
 		m.addMember(m4);
 		m.addMember(m5);
-		
+
 		System.out.println("\nPrint All");
 		m.showAll();
-		
+
 		m.removeMember(1);
 		m.removeMember(101);
-		
+
 		System.out.println("\nPrint All");
 		m.showAll();
 	}
