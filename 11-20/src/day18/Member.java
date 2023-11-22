@@ -1,6 +1,6 @@
 package day18;
 
-public class Member {
+public class Member{
 
 	private int ID;
 	private String name;
@@ -16,5 +16,13 @@ public class Member {
 	
 	public int getID() {
 		return this.ID;
+	}
+	
+	public int hashCode() {
+		return 0;
+	}
+	
+	public boolean equals() {
+		return true;
 	}
 }

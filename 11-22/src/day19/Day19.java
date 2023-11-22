@@ -1,6 +1,6 @@
-package day18;
+package day19;
 
-public class Day18 {
+public class Day19 {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -10,7 +10,7 @@ public class Day18 {
 		Member m2 = new Member(102, "Kim");
 		Member m3 = new Member(103, "Park");
 		Member m4 = new Member(104, "Park");
-		Member m5 = new Member(101, "Kim");
+		Member m5 = new Member(101, "Lee2");
 		
 		System.out.println("insert 시작");
 		m.addMember(m1);
@@ -24,7 +24,7 @@ public class Day18 {
 		
 		System.out.println("\ndelete 시작");
 		m.removeMember(1);
-		m.removeMember(101);
+		m.removeMember(104);
 		
 		System.out.println("\nPrint All");
 		m.showAll();
