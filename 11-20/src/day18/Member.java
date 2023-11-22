@@ -1,6 +1,6 @@
 package day18;
 
-public class Member {
+public class Member{
 
 	private int ID;
 	private String name;
@@ -9,10 +9,20 @@ public class Member {
 		this.ID = i;
 		this.name = n;
 	}
+	
 	public String toString() {
 		return "ID: " + this.ID + " Name : " + this.name;
 	}
+	
 	public int getID() {
 		return this.ID;
+	}
+	
+	public int hashCode() {
+		return 0;
+	}
+	
+	public boolean equals() {
+		return true;
 	}
 }
