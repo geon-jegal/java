@@ -7,7 +7,7 @@ public class MemberManager {
 	private TreeMap<Integer, Member> m;
 	
 	public MemberManager() {
-		m = new TreeMap<Integer, Member>(new AgeComparator());
+		m = new TreeMap<Integer, Member>(new IDComparator());
 	}
 	
 	public void addMember(Member M) {

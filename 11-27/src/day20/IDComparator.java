@@ -2,7 +2,7 @@ package day20;
 
 import java.util.*;
 
-public class AgeComparator implements Comparator<Integer> {
+public class IDComparator implements Comparator<Integer> {
 
 	/*
 	@Override
