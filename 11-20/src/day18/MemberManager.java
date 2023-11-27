@@ -37,8 +37,4 @@ public class MemberManager {
 	        System.out.println(member);
 	    }
 	}
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> branch 'main' of https://github.com/geon-jegal/java.git

@@ -1,4 +1,4 @@
-package day19;
+package day20;
 
 public class Member{
 
@@ -35,11 +35,12 @@ public class Member{
         }
         */
         Member member = (Member) obj;
-        return ID == member.getID();
+        return ID == member.ID;
     }
 
     @Override
     public int hashCode() {
         return ID;
     }
+
 }
