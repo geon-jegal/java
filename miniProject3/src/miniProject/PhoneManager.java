@@ -11,7 +11,7 @@ public class PhoneManager {
     public PhoneManager() {
         this.phoneMap = new HashMap<>();
         this.sc = new Scanner(System.in); // Scanner 객체를 생성
-        loadFromFile("phoneData.dat");
+        loadFromFile("phoneData.txt");
     }
 
     private void insert() {
@@ -138,7 +138,7 @@ public class PhoneManager {
                     System.out.println("프로그램을 종료합니다.");
                     sc.close(); // 프로그램 종료 시에 Scanner를 닫아줍니다.
                     try {
-                        saveToFile("phoneData.dat"); // 프로그램 종료 시에 파일로 저장
+                        saveToFile("phoneData.txt"); // 프로그램 종료 시에 파일로 저장
                     } catch (Exception e) {
                         e.printStackTrace();
                         System.out.println("데이터 저장 중 오류가 발생했습니다.");
