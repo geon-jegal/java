@@ -1,10 +1,12 @@
 package miniProject;
 
-public class PhoneUniv extends Phone {
+import java.io.Serializable;
+
+public class PhoneUniv extends Phone implements Serializable {
 	private int grade;
 	private String major;
 	
-	public PhoneUniv(int num, String name, int grd, String mjr) {
+	public PhoneUniv(String num, String name, int grd, String mjr) {
 		super(num, name);
 		this.grade = grd;
 		this.major = mjr;

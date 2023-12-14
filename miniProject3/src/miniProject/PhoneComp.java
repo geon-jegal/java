@@ -1,9 +1,11 @@
 package miniProject;
 
-public class PhoneComp extends Phone {
+import java.io.Serializable;
+
+public class PhoneComp extends Phone implements Serializable {
 	private String Comp;
 	
-	public PhoneComp(int num, String name, String comp) {
+	public PhoneComp(String num, String name, String comp) {
 		super(num, name);
 		this.Comp = comp;
 	}

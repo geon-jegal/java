@@ -1,15 +1,17 @@
 package miniProject;
 
-public class Phone {
+import java.io.Serializable;
+
+public class Phone  implements Serializable {
 	private String name;
-	private int number;
+	private String number;
 	
-	public Phone(int num, String name) {
+	public Phone(String num, String name) {
 		this.number = num;
 		this.name = name;
 	}
 	
-	public int getNum() {
+	public String getNum() {
 		return this.number;
 	}
 	
