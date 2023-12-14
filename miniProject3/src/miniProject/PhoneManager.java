@@ -87,7 +87,7 @@ public class PhoneManager {
         }
     }
 
-    
+    // 검색 메서드
     private void search(String num) {
     	boolean found = false;
         for (Phone phone : phoneSet) {
@@ -102,6 +102,7 @@ public class PhoneManager {
         }
     }
 
+    // 삭제 메서드
     private void delete(String num) {
     	Iterator<Phone> iterator = phoneSet.iterator();
         boolean found = false;
@@ -119,6 +120,7 @@ public class PhoneManager {
         }
     }
 
+    // 출력 메서드
     private void displayAll() {
     	if (phoneSet.isEmpty()) {
             System.out.println("저장된 연락처가 없습니다.");
@@ -152,6 +154,7 @@ public class PhoneManager {
         }
     }
     
+    // 실행 메서드
     public void run() {
         while (true) {
             System.out.println("전화번호 관리 프로그램");
