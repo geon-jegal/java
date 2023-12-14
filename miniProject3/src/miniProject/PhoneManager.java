@@ -30,7 +30,7 @@ public class PhoneManager {
         Iterator<Phone> iterator = phoneSet.iterator();
         while (iterator.hasNext()) {
             Phone existingPhone = iterator.next();
-            if (existingPhone.getNum().equals(num) && existingPhone.getName().equals(name)) {
+            if (existingPhone.getNum().equals(num)) {
                 isDuplicate = true;
                 if (existingPhone.getClass() == Phone.class && (type == 1 || type == 2)) {
                     // 기존 데이터가 슈퍼클래스이고 새로운 데이터가 자식클래스인 경우 교체
@@ -91,7 +91,7 @@ public class PhoneManager {
     private void search(String num) {
     	boolean found = false;
         for (Phone phone : phoneSet) {
-            if (phone.getNum() == num) {
+            if (phone.getNum().equals(num)) {
                 phone.Show();
                 found = true;
                 break;
@@ -108,7 +108,7 @@ public class PhoneManager {
         boolean found = false;
         while (iterator.hasNext()) {
             Phone phone = iterator.next();
-            if (phone.getNum() == num) {
+            if (phone.getNum().equals(num)) {
                 iterator.remove();
                 System.out.println(num + "을(를) 삭제했습니다.");
                 found = true;
